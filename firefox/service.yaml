@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: firefox
 spec:
+  type: LoadBalancer
   selector:
     app.kubernetes.io/name: firefox
   ports:
