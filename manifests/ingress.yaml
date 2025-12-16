@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: todo-ui
+  labels:
+    app.kubernetes.io/name: todo-ui
+spec:
+  rules:
+  - host: todoui@devopsAI.online
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: todo-ui-svc
+            port: 
+              number: 80
